@@ -1,14 +1,11 @@
-name: "Deploy Ejemplo"
+name: Deploy to server
 
-on:
-  push:
-    branches: ["master"]
+on: push
 
 jobs:
-  deploy-ejemplo:
+  first_jobs:
     runs-on: ubuntu-latest
+
     steps:
-      - run: echo "Hacemos pull del codigo"
-      - run: echo "Correr migraciones"
-      - run: echo "Generar bionario"
-      - run: echo "Publicar version"
+      - name: Hola Mundo
+        run: echo "Hola Mundo"
