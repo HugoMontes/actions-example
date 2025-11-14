@@ -8,7 +8,7 @@ jobs:
   deploy-ejemplo:
     runs-on: ubuntu-latest
     steps:
-      run: echo "Hacemos pull del codigo"
-      run: echo "Correr migraciones"
-      run: echo "Generar bionario"
-      run: echo "Publicar version"
+      - run: echo "Hacemos pull del codigo"
+      - run: echo "Correr migraciones"
+      - run: echo "Generar bionario"
+      - run: echo "Publicar version"
