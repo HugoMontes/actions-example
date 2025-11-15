@@ -8,7 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        message: ["HTML", "CSS", "JavaScript"]
+        message: ["Linux", "Windows", "MacOs"]
 
     steps:
       - name: Imprimir mensaje
