@@ -38,6 +38,6 @@ jobs:
     needs: first_jobs
     runs-on: ubuntu-latest
 
-    steps: 
+    steps:
       - name: Mostrar nombre
-        run: echo "Nombre: ${{ needs.first_jobs.outputs.nombre }}"
+        run: echo "Nombre es ${{ needs.first_jobs.outputs.nombre }}"
