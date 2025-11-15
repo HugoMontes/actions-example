@@ -45,3 +45,17 @@ jobs:
 
       - name: Mostrar nombre
         run: echo "El nombre es ${{ needs.first_jobs.outputs.nombre }}"
+
+  third_jobs:
+    name: Tercer Job
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Generar archivo
+        run: echo "Archivo prueba, hola" >> test.log
+
+      - name: Subir artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: archivo-test
+          path: test.log
