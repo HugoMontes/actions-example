@@ -11,7 +11,6 @@ jobs:
       NAME: EjemploDeploy
 
     outputs:
-      carnet: 123456
       nombre: ${{ steps.step_1.outputs.my_variable }}
 
     steps:
@@ -39,9 +38,6 @@ jobs:
     needs: first_jobs
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Mostrar carnet
-        run: echo "Carnet: ${{ needs.first_jobs.outputs.carnet }}"
-      
+    steps: 
       - name: Mostrar nombre
         run: echo "Nombre: ${{ needs.first_jobs.outputs.nombre }}"
