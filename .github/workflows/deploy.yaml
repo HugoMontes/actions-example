@@ -28,7 +28,7 @@ jobs:
         run: echo "my_variable=Juan Perez" >> $GITHUB_OUTPUT
 
       - name: Obtener mensaje
-        run: echo "${{ steps.steps_1.outputs.my_variable }}"
+        run: echo "${{ steps.step_1.outputs.my_variable }}"
 
   second_jobs:
     if: ${{ github.ref == 'refs/heads/master' }}
