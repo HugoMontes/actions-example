@@ -41,7 +41,7 @@ jobs:
 
     steps:
       - name: Mostrar carnet
-        run: echo "Nombre es ${{ needs.first_jobs.outputs.carnet }}"
+        run: echo "El carnet es ${{ needs.first_jobs.outputs.carnet }}"
 
       - name: Mostrar nombre
-        run: echo "Nombre es ${{ needs.first_jobs.outputs.nombre }}"
+        run: echo "El nombre es ${{ needs.first_jobs.outputs.nombre }}"
