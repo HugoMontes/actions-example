@@ -23,6 +23,13 @@ jobs:
       - name: Listar directorios despues del action
         run: ls -al
 
+      - name: Adicionar variable a $GITHUB_OUTPUT
+        id: step_1
+        run: echo "my_variable=Juan Perez" >> $GITHUB_OUTPUT
+
+      - name: Obtener mensaje
+        run: echo "${{ steps.steps_1.outputs.my_variable }}"
+
   second_jobs:
     if: ${{ github.ref == 'refs/heads/master' }}
     needs: first_jobs
