@@ -39,13 +39,9 @@ jobs:
     needs: first_jobs
     runs-on: ubuntu-latest
 
-    env:
-      SALIDA_CARNET: ${{ needs.first_jobs.outputs.carnet }}
-      SALIDA_NOMBRE: ${{ needs.first_jobs.outputs.nombre }}
-
     steps:
       - name: Mostrar carnet
-        run: echo "Carnet: ${{ env.SALIDA_CARNET }}"
+        run: echo "Carnet: ${{ needs.first_jobs.outputs.carnet }}"
       
       - name: Mostrar nombre
-        run: echo "Nombre: ${{ env.SALIDA_NOMBRE }}"
+        run: echo "Nombre: ${{ needs.first_jobs.outputs.nombre }}"
